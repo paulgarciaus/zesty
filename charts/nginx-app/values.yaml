@@ -7,8 +7,8 @@ image:
 
 service:
   type: ClusterIP
-  port: "eighty"
-  targetPort: 8080
+  port: 80
+  targetPort: 80
 
 ingress:
   enabled: true
@@ -16,4 +16,4 @@ ingress:
   host: nginx.local
   tls:
     enabled: true
-    secretName: nginx-app-tls
+    secretName: nginx-tls
