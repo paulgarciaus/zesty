@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "1.25"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: "eighty"
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  host: nginx.local
+  tls:
+    enabled: true
+    secretName: nginx-app-tls
